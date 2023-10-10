@@ -1,0 +1,133 @@
+#header-banner {
+    width: 1520px;
+    /* Adjust the width to your desired size */
+    height: 100px;
+    /* Adjust the height to your desired size */
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(180deg, #000000b5 0%, rgba(0, 0, 0, 0.6) 66.67%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.24), 0px 6px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -webkit-overflow-scrolling: touch;
+    min-width: 250px;
+    position: absolute;
+    list-style: none;
+    padding: 0 23px;
+    float: left;
+    display: table;
+    left: -70px;
+    width: 100%;
+    float: left;
+    display: none;
+}
+
+.dropdown-menu::before {
+    content: " ";
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -8px;
+    right: 45%;
+    background: #fff;
+    display: block;
+    transform: rotateZ(45deg);
+    z-index: 99;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    opacity: 0.8;
+    display: grid;
+    padding: 17px 0px 15px;
+}
+
+.dropdown-menu li a:hover {
+    border-top: 5px solid white;
+}
+
+.mobile-container {
+    display: none;
+}
+
+@media screen and (max-width: 678px) {
+    #header-banner {
+        width: 500px;
+    }
+
+    .display-none-mobile {
+        display: none;
+    }
+
+    .mobile-container {
+        display: block;
+        max-width: 480px;
+        margin: auto;
+        color: white;
+        border-radius: 10px;
+        position: relative;
+        top: 25px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .active {
+        color: white;
+    }
+}

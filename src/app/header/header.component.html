@@ -1,0 +1,54 @@
+<header class="header">
+    <div id="header-banner"></div>
+    <div class="logo-container">
+        <img src="../../assets/img/logo.png">
+        <span class="toggle-btn">&#9776;</span>
+    </div>
+    <ul class="display-none-mobile">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown">
+            <a href="" onclick="event.preventDefault();">About <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="/about-us">ISKCON Jaipur</a></li>
+                <li><a href="/srila-prabhupada">Founder Acharya</a></li>
+                <li><a target="_blank" href="https://goo.gl/maps/ZysAUfb4bD96BoP68">How to Reach</a></li>
+            </ul>
+        </li>
+        <li><a href="/join-iskcon">Join ISKCON</a></li>
+        <li class="dropdown">
+            <a href="" onclick="event.preventDefault();">Donate <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="" (click)="donate('Annadan')">Annadan Sewa</a></li>
+                <li><a href="" (click)="donate('cow')">Go Sewa</a></li>
+                <li><a href="" (click)="donate('nitya')">Nitya Sewa</a></li>
+                <li><a href="" (click)="donate('donation')">Any Donation Sewa</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="" onclick="event.preventDefault();">Media <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="/live-darshan">Live Darshan</a></li>
+                <li><a href="/time-table">Temple Timings</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <!-- <li><a href="">Any Donation Sewa</a></li> -->
+            </ul>
+        </li>
+    </ul>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a href="#home" class="active"></a>
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <!-- End smartphone / tablet look -->
+    </div>
+</header>

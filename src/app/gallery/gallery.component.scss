@@ -1,0 +1,142 @@
+.waves {
+    position: relative;
+    width: 100%;
+    height: 16vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+    bottom: 110px;
+}
+
+.waves.waves-sm {
+    height: 50px;
+    min-height: 50px
+}
+
+.waves.no-animation .moving-waves>use {
+    animation: none
+}
+
+.wave-rotate {
+    transform: rotate(180deg)
+}
+
+.moving-waves>use {
+    animation: f 40s cubic-bezier(.55, .5, .45, .5) infinite
+}
+
+.moving-waves>use:first-child {
+    animation-delay: -2s;
+    animation-duration: 11s
+}
+
+.moving-waves>use:nth-child(2) {
+    animation-delay: -4s;
+    animation-duration: 13s
+}
+
+.moving-waves>use:nth-child(3) {
+    animation-delay: -3s;
+    animation-duration: 15s
+}
+
+.moving-waves>use:nth-child(4) {
+    animation-delay: -4s;
+    animation-duration: 20s
+}
+
+.moving-waves>use:nth-child(5) {
+    animation-delay: -4s;
+    animation-duration: 25s
+}
+
+.moving-waves>use:nth-child(6) {
+    animation-delay: -3s;
+    animation-duration: 30s
+}
+
+.top-section {
+    /* The image used */
+    // background-image: url("../../assets/img/iskcon-jaipuritemple.jpg");
+
+    background-color: #404;
+    background-image: url('../../assets/img/gallery-top-line.svg'), url('../../assets/img/gallery-background.svg');
+
+    /* Set a specific height */
+    min-height: 70vh;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    // background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_header {
+    font-family: Quicksand;
+    line-height: 1.3em;
+    padding-top: 200px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 5.4rem;
+    text-shadow: 4px 2px 0px #000000;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    min-height: 100vh;
+    margin-bottom: 20vh;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Compensate for excess margin on outer gallery flex items */
+    margin: -1rem -1rem;
+}
+
+.gallery-item {
+    /* Minimum width of 24rem and grow to fit available space */
+    flex: 1 0 24rem;
+    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+    }
+
+    .gallery,
+    .gallery-item {
+        margin: 0;
+    }
+}

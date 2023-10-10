@@ -1,0 +1,246 @@
+.top-section {
+    /* The image used */
+    background-image: url("https://www.iskcondelhi.com/wp-content/uploads/2021/06/seminar-main-page.jpg");
+
+    /* Set a specific height */
+    min-height: 150vh;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-line {
+    background-image: url('../../assets/img/top-line.svg');
+    background-size: cover;
+    bottom: 120px;
+    height: 120px;
+    z-index: 1;
+    transform: scale(1, 1);
+    position: relative;
+}
+
+.middle-bottom-line {
+    background-image: url('../../assets/img/middle-bottom-line.svg');
+    background-size: cover;
+    bottom: -150px;
+    height: 150px;
+    z-index: 1;
+    transform: scale(1, 1);
+    position: relative;
+}
+
+.bottom-line {
+    background-image: url('../../assets/img/join-top-line.svg');
+    background-size: cover;
+    bottom: 149px;
+    height: 150px;
+    z-index: 1;
+    transform: scale(-1, -1);
+    position: relative;
+}
+
+.bottom-box {
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+    background: white;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.bottom-box .part {
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+
+.bottom-box .part:not(:last-child) {
+    border-right: 1px dotted black;
+}
+
+/* Additional Styles */
+.bottom-box h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.bottom-box p {
+    font-size: 14px;
+    color: #777;
+}
+
+.my-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #303;
+    padding: 20px;
+    height: 150vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 240px;
+}
+
+.image-join-section {
+    position: relative;
+    margin: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.image-join-section img {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+    position: relative;
+}
+
+.image-join-section .text {
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 400;
+    letter-spacing: .011em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    width: 200%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin-top: -10px;
+    background-color: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding: 50px 25px;
+    box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+    border: 1.5px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+}
+
+.button {
+    background-color: #1e4da8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-color: #002147;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Sketch Block';
+    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.woff') format('woff'),
+        url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.ttf') format('truetype'),
+        url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.svg#SketchBlockBold') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo 700';
+    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.woff') format('woff'),
+        url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+        url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.svg#SketchBlockBold') format('svg');
+}
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.woff') format('woff'),
+        url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.ttf') format('truetype'),
+        url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
+}
+
+.arrow_seemore {
+    animation: slide1 1s ease-in-out infinite;
+    margin-left: 9px;
+}
+
+@keyframes slide1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+}
+
+#course-section {
+    width: 100%;
+    position: relative;
+}
+
+#main-section {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    margin-top: -120px;
+    margin-bottom: -160px;
+}
+
+strong {
+    color: #fff;
+}
+
+em {
+    color: #fff79e;
+}
+
+.box {
+    border: 3px #F8EFF8;
+    border-style: solid solid dotted solid;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.bottom-section {
+    padding-top: 0px;
+    min-height: 55vh;
+    position: relative;
+    top: -200px;
+}
+
+.feedback-section-text {
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}

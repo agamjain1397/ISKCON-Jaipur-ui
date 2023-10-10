@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ISKCON Jaipur</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontAwesome.css">
+  <link rel="stylesheet" href="assets/css/hero-slider.css">
+  <link rel="stylesheet" href="assets/css/templatemo-main.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+  <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <app-root>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+
+    <script>
+      AOS.init();
+      var prevScrollPos = window.pageYOffset;
+
+      window.addEventListener('load', function () {
+        document.getElementsByTagName('header')[0].addEventListener('click', function () {
+          toggle_menu();
+        });
+      });
+
+      var animationTriggered = false;
+
+      function startNumberAnimation() {
+        if (animationTriggered) {
+          return; // Animation already triggered, exit the function
+        }
+
+        animationTriggered = true;
+
+        $('.number').each(function () {
+          var $this = $(this);
+          var targetNumber = parseInt($this.text());
+          $({ Counter: 0 }).animate(
+            { Counter: targetNumber },
+            {
+              duration: 3000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.ceil(this.Counter));
+              },
+              complete: function () {
+                $this.text(targetNumber); // Set the final value explicitly
+              }
+            }
+          );
+        });
+      }
+
+      window.addEventListener('scroll', function () {
+        header_scroll();
+      });
+      function header_scroll() {
+        var my_header = document.getElementsByTagName('header')[0];
+        var scroll_height = window.pageYOffset;
+        if (scroll_height > 20 && scroll_height > prevScrollPos) {
+          my_header.style.animation = 'fade-out 0.5s';
+          setTimeout(function () {
+            my_header.style.display = 'none';
+          }, 500);
+        }
+        else if (scroll_height > 100) {
+          my_header.style.animation = 'fade-in 0.5s';
+          setTimeout(function () {
+            my_header.style.display = 'block';
+          }, 500);
+          my_header.className = 'header header-scroll';
+          $('#header-banner').css('display', 'none');
+        }
+        else if (scroll_height > 300) {
+          $('#about-us-section').addClass('animated-text');
+        }
+        else {
+          my_header.style.animation = '';
+          my_header.style.display = 'block';
+          my_header.className = 'header';
+          $('#header-banner').css('display', 'block');
+        }
+
+        prevScrollPos = scroll_height;
+
+        if (scroll_height > 220 && scroll_height < 500) {
+          startNumberAnimation();
+        }
+        // else {
+        //     animationTriggered = false; // Reset animation trigger if scroll is outside the desired range
+        // }
+      }
+
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+</body>
+
+</html>
